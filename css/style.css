@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
@@ -16,29 +16,16 @@ a {
     color: #333;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #555;
-}
-
 /* Header */
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     padding: 20px 5%;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -47,32 +34,24 @@ nav {
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 600;
-}
-
 nav ul {
     display: flex;
     list-style: none;
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin: 0 15px;
 }
 
-nav ul li a {
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #888;
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 /* Hero Section */
 #hero {
-    height: 100vh;
+    height: 80vh;
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -81,43 +60,45 @@ nav ul li a:hover {
     text-align: center;
     color: #fff;
     padding: 0 20px;
+    margin-top: 80px;
 }
 
 #hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out;
+    font-weight: 300;
 }
 
-#hero p {
-    font-size: 24px;
-    animation: fadeInUp 1s ease-out 0.5s both;
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
 }
 
 /* Kolekcija */
 #kolekcija {
-    padding: 100px 5%;
-}
-
-#kolekcija h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 36px;
+    padding: 80px 5%;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
 }
 
 .product {
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: translateY(-10px);
 }
 
 .product img {
@@ -128,95 +109,105 @@ nav ul li a:hover {
 }
 
 .product h3 {
+    font-weight: 400;
     margin-bottom: 10px;
 }
 
 .product p {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
 }
 
 /* O nama */
 #o-nama {
     background-color: #f9f9f9;
-    padding: 100px 5%;
+    padding: 80px 5%;
     text-align: center;
 }
 
-.content-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 #o-nama h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-weight: 300;
     font-size: 36px;
 }
 
 #o-nama p {
-    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Kontakt */
 #kontakt {
-    padding: 100px 5%;
+    padding: 80px 5%;
     text-align: center;
 }
 
 #kontakt h2 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    font-weight: 300;
     font-size: 36px;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+#kontakt p {
+    margin-bottom: 10px;
 }
 
-input, textarea {
-    margin-bottom: 20px;
+#kontakt form {
+    margin-top: 30px;
+}
+
+#kontakt input[type="email"] {
     padding: 10px;
+    width: 300px;
     border: 1px solid #ddd;
+    margin-right: 10px;
 }
 
-textarea {
-    height: 150px;
+#kontakt button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#kontakt button:hover {
+    background-color: #555;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #f9f9f9;
     padding: 40px 5%;
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .social-links a {
-    color: #fff;
     margin-left: 20px;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #ddd;
-}
-
-/* Animacije */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Responzivnost */
@@ -226,19 +217,16 @@ footer {
     }
 
     nav ul {
-        margin-top: 20px;
-    }
-
-    nav ul li {
         margin: 10px 0;
     }
 
-    #hero h1 {
-        font-size: 36px;
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    #hero p {
-        font-size: 18px;
+    #kontakt input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .footer-content {
