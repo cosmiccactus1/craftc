@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Svijeće | Luksuzne ručno izrađene svijeće</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Svijeća Shop - Luksuzne ručno izrađene svijeće</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Zaglavlje s navigacijom -->
     <header>
         <nav>
             <ul>
                 <li><a href="#kolekcija">Kolekcija</a></li>
                 <li><a href="#o-nama">O nama</a></li>
-            </ul>
-            <div class="logo">LUMINA</div>
-            <ul>
+                <li><h1>SVIJEĆA SHOP</h1></li>
                 <li><a href="#kontakt">Kontakt</a></li>
                 <li><a href="#kosarica">Košarica (0)</a></li>
             </ul>
@@ -23,64 +21,46 @@
     </header>
 
     <main>
-        <section id="hero">
-            <h1>Jesenska kolekcija</h1>
-            <a href="#kolekcija" class="cta-button">Pregledaj kolekciju</a>
-        </section>
-
+        <!-- Sekcija s kolekcijom svijeća -->
         <section id="kolekcija">
+            <h2>Jesenska kolekcija</h2>
             <div class="product-grid">
+                <!-- Primjer jednog proizvoda u gridu -->
                 <div class="product">
-                    <img src="images/pumpkin-spice.jpg" alt="Pumpkin Spice svijeća">
-                    <h3>Pumpkin Spice</h3>
-                    <p>180 kn</p>
-                    <button class="add-to-cart">Dodaj u košaricu</button>
+                    <a href="saturday.html">
+                        <img src="images/saturday-1.jpg" alt="Saturday svijeća">
+                        <h3>Saturday</h3>
+                        <p>40 BAM</p>
+                    </a>
+                    <button>Dodaj u košaricu</button>
                 </div>
-                <div class="product">
-                    <img src="images/apple-cider.jpg" alt="Apple Cider svijeća">
-                    <h3>Apple Cider</h3>
-                    <p>180 kn</p>
-                    <button class="add-to-cart">Dodaj u košaricu</button>
-                </div>
-                <div class="product">
-                    <img src="images/cinnamon-bark.jpg" alt="Cinnamon Bark svijeća">
-                    <h3>Cinnamon Bark</h3>
-                    <p>180 kn</p>
-                    <button class="add-to-cart">Dodaj u košaricu</button>
-                </div>
-                <div class="product">
-                    <img src="images/autumn-leaves.jpg" alt="Autumn Leaves svijeća">
-                    <h3>Autumn Leaves</h3>
-                    <p>180 kn</p>
-                    <button class="add-to-cart">Dodaj u košaricu</button>
-                </div>
+                <!-- Ponovite ovaj blok za svaku svijeću u kolekciji -->
+                <!-- ... -->
             </div>
         </section>
 
+        <!-- O nama sekcija -->
         <section id="o-nama">
             <h2>O nama</h2>
-            <p>Lumina Svijeće je brend posvećen stvaranju luksuznih, ručno izrađenih svijeća koje donose toplinu i eleganciju u vaš dom. Naše svijeće su izrađene od 100% prirodnog sojinog voska i eteričnih ulja najviše kvalitete.</p>
+            <p>Svijeća Shop je vaša destinacija za luksuzne, ručno izrađene svijeće koje donose toplinu i eleganciju u vaš dom. Naše svijeće su izrađene od 100% prirodnog sojinog voska i eteričnih ulja najviše kvalitete, pažljivo odabranih kako bi stvorile jedinstvene mirise koji će oplemeniti vaš prostor.</p>
         </section>
 
+        <!-- Kontakt sekcija -->
         <section id="kontakt">
             <h2>Kontaktirajte nas</h2>
-            <p>Email: info@luminasvijece.hr</p>
-            <p>Telefon: 01 234 5678</p>
-            <form>
-                <input type="email" placeholder="Vaš email" required>
-                <button type="submit">Pretplatite se na newsletter</button>
-            </form>
+            <p>Email: info@svijecashop.ba</p>
+            <p>Telefon: 033 123 456</p>
         </section>
     </main>
 
+    <!-- Podnožje s logotipima za plaćanje -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Lumina Svijeće. Sva prava pridržana.</p>
-            <div class="social-links">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-            </div>
+        <div class="payment-methods">
+            <img src="images/visa-logo.png" alt="Visa" class="payment-logo">
+            <img src="images/mastercard-logo.png" alt="Mastercard" class="payment-logo">
+            <img src="images/paypal-logo.png" alt="PayPal" class="payment-logo">
         </div>
+        <p>&copy; 2024 Svijeća Shop. Sva prava pridržana.</p>
     </footer>
 </body>
 </html>
