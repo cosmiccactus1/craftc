@@ -1,239 +1,140 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Osnovni stilovi */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Header */
+/* Header i navigacija */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: #fff;
-    padding: 20px 5%;
-    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
+    list-style-type: none;
     display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-/* Hero Section */
-#hero {
-    height: 80vh;
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 0 20px;
-    margin-top: 80px;
+    padding: 1rem 0;
+    margin: 0;
 }
 
-#hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #fff;
+nav ul li a {
+    text-decoration: none;
     color: #333;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: bold;
 }
 
-.cta-button:hover {
-    background-color: #f0f0f0;
+nav ul li h1 {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
-/* Kolekcija */
-#kolekcija {
-    padding: 80px 5%;
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Kolekcija svijeća */
+#kolekcija h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    gap: 2rem;
 }
 
 .product {
+    border: 1px solid #ddd;
+    padding: 1rem;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
 }
 
 .product img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 .product h3 {
-    font-weight: 400;
-    margin-bottom: 10px;
+    margin: 1rem 0 0.5rem;
 }
 
 .product p {
-    margin-bottom: 15px;
+    font-weight: bold;
+    color: #4CAF50;
 }
 
-.add-to-cart {
-    background-color: #333;
-    color: #fff;
+.product button {
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.add-to-cart:hover {
-    background-color: #555;
+.product button:hover {
+    background-color: #45a049;
 }
 
-/* O nama */
+/* O nama sekcija */
 #o-nama {
     background-color: #f9f9f9;
-    padding: 80px 5%;
-    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
 }
 
-#o-nama h2 {
-    margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 36px;
-}
-
-#o-nama p {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Kontakt */
+/* Kontakt sekcija */
 #kontakt {
-    padding: 80px 5%;
     text-align: center;
-}
-
-#kontakt h2 {
-    margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 36px;
-}
-
-#kontakt p {
-    margin-bottom: 10px;
-}
-
-#kontakt form {
-    margin-top: 30px;
-}
-
-#kontakt input[type="email"] {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ddd;
-    margin-right: 10px;
-}
-
-#kontakt button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#kontakt button:hover {
-    background-color: #555;
 }
 
 /* Footer */
 footer {
-    background-color: #f9f9f9;
-    padding: 40px 5%;
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
     text-align: center;
 }
 
-.footer-content {
+.payment-methods {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
-.social-links a {
-    margin-left: 20px;
+.payment-logo {
+    height: 30px;
+    margin: 0 10px;
 }
 
-/* Responzivnost */
+/* Responzivni dizajn */
 @media (max-width: 768px) {
-    nav {
+    nav ul {
         flex-direction: column;
     }
 
-    nav ul {
-        margin: 10px 0;
+    nav ul li {
+        margin: 0.5rem 0;
     }
 
     .product-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    #kontakt input[type="email"] {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .social-links {
-        margin-top: 20px;
     }
 }
