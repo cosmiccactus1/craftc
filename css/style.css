@@ -13,7 +13,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: inherit;
 }
 
 /* Header */
@@ -44,7 +44,7 @@ nav ul li a {
     letter-spacing: 1px;
 }
 
-.logo h1 {
+.logo a {
     font-size: 24px;
     font-weight: 300;
     letter-spacing: 3px;
@@ -52,63 +52,64 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f8f8f8;
-    margin-top: 80px;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 0 20px;
 }
 
-#hero h2 {
-    font-size: 36px;
+#hero h1 {
+    font-size: 48px;
     margin-bottom: 20px;
     font-weight: 300;
 }
 
+#hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
 .cta-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    padding: 12px 24px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #555;
+    background-color: #f0f0f0;
 }
 
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+/* Featured Products */
+#featured-products {
+    padding: 80px 20px;
 }
 
-h2 {
+#featured-products h2 {
     text-align: center;
-    font-weight: 300;
+    font-size: 36px;
     margin-bottom: 40px;
-    font-size: 28px;
+    font-weight: 300;
 }
 
-/* Product Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product {
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: translateY(-5px);
 }
 
 .product img {
@@ -130,28 +131,26 @@ h2 {
 }
 
 .product button {
-    background-color: #fff;
-    border: 1px solid #333;
-    color: #333;
+    background-color: #333;
+    color: #fff;
+    border: none;
     padding: 8px 15px;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .product button:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #555;
 }
 
 /* Footer */
 footer {
-    background-color: #f8f8f8;
+    background-color: #f9f9f9;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
 }
 
 footer p {
@@ -169,8 +168,12 @@ footer p {
         margin: 10px 0;
     }
 
-    #hero {
-        margin-top: 200px;
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 16px;
     }
 
     .product-grid {
